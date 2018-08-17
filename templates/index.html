@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Titanic AI Project</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="../static/styles/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/styles/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/styles/grayscale.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">Titanic AI</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
+                  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+              <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#about">Titanic Information</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#projects">ML Algorithm Accuracy</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#charts">Titanic Statistics</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#form">Form</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">
+            Titanic AI Project
+          </h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">
+            Find out if you would survive on the Titanic!
+          </h2>
+          <a href="#form" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">Titanic</h2>
+            <p class="text-white-50">
+              The sinking of the RMS Titanic was one of the most infamous shipwrecks in history.
+              On April 15, 1912, the Titanic sank after colliding with an iceberg, killing 1502
+              out of 2224 passengers and crew.
+            </p>
+          </div>
+        </div>
+        <img src="../static/images/Titanic_1.jpg" class="img-fluid" alt="">
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">
+
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-8 col-lg-7">
+            <img class="img-fluid mb-3 mb-lg-0" src="../static/images/algorithm.jpg" alt="">
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>Accuracy Scores:</h4>
+              <p class="text-black-50 mb-0"> SVC : 82%</p>
+              <p class="text-black-50 mb-0">KNN: 80%</p>
+              <p class="text-black-50 mb-0">Random Forest: 79%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="../static/images/Titanic_2.jpg" alt="">
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white">Dimensions and Layout</h4>
+                  <p class="mb-0 text-white-50">
+                    The Titanic was 882 feet 9 inches (269.06 m) long with a maximum breadth of 92 feet 6 inches (28.19 m). 
+                    Her total height was 104 feet (32 m).
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ml-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Two Row -->
+        <div class="row justify-content-center no-gutters">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="../static/images/Titanic_1.jpg" alt="">
+          </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                  <h4 class="text-white">Features</h4>
+                  <p class="mb-0 text-white-50">
+                    The Titanic was equipped with three main engines: two reciprocating four-cylinder, 
+                    triple-expansion steam engines and one centrally placed low-pressure Parsons 
+                    turbine, each driving a propeller. The two reciprocating engines had a combined output of 30,000 hp.
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 mr-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- Projects Section -->
+    <section id="charts" class="projects-section bg-light">
+        <div class="container">
+       
+          <!-- Charts One Row -->
+          <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div id="bar4"></div>
+            </div>
+            <div class="col-lg-6">
+              <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                  <div class="project-text w-100 my-auto text-center text-lg-left">
+                    <h4 class="text-white">Passenger Class Statistics</h4>
+                    <p class="mb-0 text-white-50">
+                      The chart at the left shows the number of passengers in each passenger class on the Titanic.
+                      </p>
+                    <hr class="d-none d-lg-block mb-0 ml-0">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Two Row -->
+          <div class="row justify-content-center no-gutters">
+              <div class="col-lg-6">
+                  <div id="bar3"></div>
+              </div>
+              <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                  <div class="d-flex h-100">
+                    <div class="project-text w-100 my-auto text-center text-lg-right">
+                      <h4 class="text-white">Gender Statistics</h4>
+                      <p class="mb-0 text-white-50">
+                        The chart at the right shows the number of male and female passengers on the Titanic.
+                      </p>
+                      <hr class="d-none d-lg-block mb-0 mr-0">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
+    </section>
+    <!-- Form Section -->
+    <section id="form" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">Titanic Survival Check Point</h2>
+            <h3 class="text-white mb-4">Please enter your information to see the result.</h3>
+            <div class="row" style="margin-bottom:100px">
+                <div class="col-md-offset-12 col-md-12">
+                  <form method="POST" action="/send" role="form", name="userform">
+                      <div class="form-group">
+                          <label style="color:white" for="inputName">Name</label>
+                          <input type="text" class="form-control" id="inputName" name="userName" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label style="color:white" for="inputPclass">Passenger Class (1 = First Class, 2 = Second Class, 3= Third Class)</label>
+                        <input type="text" class="form-control" id="inputPclass" name="userPclass" placeholder="Pclass">
+                      </div>
+                      <div class="form-group">
+                          <label style="color:white" for="inputAge">Age</label>
+                          <input  type="text" class="form-control" id="inputAge" name="userAge" placeholder="Age">
+                      </div>
+                      <div class="form-group">
+                              <label style="color:white" for="inputEmbarked">Boarding Location (C = Cherbourg, Q = Queenstown, S = Southampton)</label>
+                              <input type="text" class="form-control" id="inputEmbarked" name="userEmbarked" placeholder="Embarked">
+                      </div>
+                      <div class="form-group">
+                          <label style="color:white" for="inputTicket">Cost of Ticket</label>
+                          <input type="text" class="form-control" id="inputTicket" name="userTicket" placeholder="Ticket">
+                      </div>
+                      <div class="form-group">
+                              <label style="color:white" for="inputGender">Gender</label>
+                              <input type="text" class="form-control" id="inputGender" name="userGender" placeholder="Gender">
+                      </div>
+                          
+                      <input type="submit" value="Submit" class="btn btn-default">
+                  </form>
+                </div>
+            </div>
+          
+          
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; Team Titanic AI
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/styles/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/styles/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/styles/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/grayscale.min.js"></script>
+    <script src="../static/js/index.js" type="text/javascript"></script>
+
+  </body>
+
+</html>
