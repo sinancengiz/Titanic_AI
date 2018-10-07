@@ -97,11 +97,20 @@ def send():
         userAge = request.form["userAge"]
         userTicket= request.form["userTicket"]
         userGender= request.form["userGender"]
+        userDropDownGender= request.form["userDropDwonGender"]
 
-        if userGender.lower() == "male":
+        print(userDropDownGender)
+
+        # if userGender.lower() == "male":
+        #     newUser[1] = 0
+        # else:
+        #     newUser[1] = 1
+
+        if userDropDownGender == "gender1":
             newUser[1] = 0
         else:
             newUser[1] = 1
+
 
         newUser[2] = int(userAge)
 

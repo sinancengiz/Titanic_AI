@@ -218,19 +218,41 @@
                           <label style="color:white" for="inputAge">Age</label>
                           <input  type="text" class="form-control" id="inputAge" name="userAge" placeholder="Age">
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                               <label style="color:white" for="inputEmbarked">Boarding Location (C = Cherbourg, Q = Queenstown, S = Southampton)</label>
                               <input type="text" class="form-control" id="inputEmbarked" name="userEmbarked" placeholder="Embarked">
-                      </div>
+                      </div> -->
+
                       <div class="form-group">
-                          <label style="color:white" for="inputTicket">Cost of Ticket</label>
+                        <label style="color:white" for="inputEmbarked">Boarding Location (C = Cherbourg, Q = Queenstown, S = Southampton)</label>
+                        <select  class="form-control" id="inputEmbarked" name="userEmbarked" placeholder="Embarked" onchange="getData(this.value)">
+                          <option value="C">Cherbourg</option>
+                          <option value="Q">Queenstown</option>
+                          <option value="S">Southampton</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                          <label style="color:white" for="inputTicket">Cost of Ticket ($0 - $500) </label>
                           <input type="text" class="form-control" id="inputTicket" name="userTicket" placeholder="Ticket">
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                               <label style="color:white" for="inputGender">Gender</label>
                               <input type="text" class="form-control" id="inputGender" name="userGender" placeholder="Gender">
+
+                      </div> -->
+
+                      <div class="form-group">
+                        <label style="color:white" for="inputGender">Gender</label>
+                        <select  class="form-control" id="inputGender" name="userDropDownGender" placeholder="Gender" onchange="getData(this.value)">
+                          <option value="gender1">Male</option>
+                          <option value="gender2">Female</option>
+                        </select>
                       </div>
-                          
+
+                    <!-- </div> -->
+
+
                       <input type="submit" value="Submit" class="btn btn-default">
                   </form>
                 </div>
