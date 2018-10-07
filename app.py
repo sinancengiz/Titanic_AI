@@ -96,8 +96,8 @@ def send():
         userEmbarked = request.form["userEmbarked"]
         userAge = request.form["userAge"]
         userTicket= request.form["userTicket"]
-        userGender= request.form["userGender"]
-        userDropDownGender= request.form["userDropDwonGender"]
+        # userGender= request.form["userGender"]
+        userDropDownGender= request.form["userDropDownGender"]
 
         print(userDropDownGender)
 
