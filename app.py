@@ -92,7 +92,6 @@ def send():
                
         userName = request.form["userName"]
         userPclass = request.form["userPclass"]
-        newUser[0] = userPclass
         userEmbarked = request.form["userEmbarked"]
         userAge = request.form["userAge"]
         userTicket= request.form["userTicket"]
@@ -100,6 +99,15 @@ def send():
         userDropDownGender= request.form["userDropDownGender"]
 
         print(userDropDownGender)
+
+        # newUser[0] = userPclass
+
+        if userPclass.lower() == "f":
+            newUser[0] = 0
+        elif userPclass.lower() == "s":
+            newUser[0] = 1
+        elif userPclass.lower() == "t":
+            newUser[0] = 2
 
         # if userGender.lower() == "male":
         #     newUser[1] = 0
@@ -130,7 +138,7 @@ def send():
         testUser = svc_scaler.transform([newUser])
         prediction = svc.predict(testUser)
 
-        user = User(name=userName, pclass=userPclass, sex=newUser[1],
+        user = User(name=userName, pclass=newUser[0], sex=newUser[1],
                     age=userAge, sibsp = 0, parch = 0, fare = newUser[5],
                     embarked = newUser[6], survived=int(prediction[0])
                    )
@@ -143,7 +151,7 @@ def send():
                                    User.fare, User.embarked, User.survived).all()
 
         name = [result[0] for result in results]
-        pclass = [int(result[1]) for result in results]
+        pclass = [result[1] for result in results]
         sex = [int(result[2]) for result in results]
         age = [int(result[3]) for result in results]
         sibsp = [int(result[4]) for result in results]

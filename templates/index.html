@@ -210,10 +210,20 @@
                           <label style="color:white" for="inputName">Name</label>
                           <input type="text" class="form-control" id="inputName" name="userName" placeholder="Name">
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label style="color:white" for="inputPclass">Passenger Class (1 = First Class, 2 = Second Class, 3= Third Class)</label>
                         <input type="text" class="form-control" id="inputPclass" name="userPclass" placeholder="Pclass">
+                      </div> -->
+                      <div class="form-group">
+                        <label style="color:white" for="inputEmbarked">Passenger Class</label>
+                        <select  class="form-control" id="inputPclass" name="userPclass" placeholder="Pclass" onchange="getData(this.value)">
+                          <option value="F">First Class</option>
+                          <option value="S">Second Class</option>
+                          <option value="T">Third Class</option>
+                        </select>
                       </div>
+
+
                       <div class="form-group">
                           <label style="color:white" for="inputAge">Age</label>
                           <input  type="text" class="form-control" id="inputAge" name="userAge" placeholder="Age">
