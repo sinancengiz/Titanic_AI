@@ -53,3 +53,15 @@ Plotly.d3.json(pasclass_url, function(error, response) {
     }
     Plotly.plot("bar4", data, layout)
 })
+
+Plotly.d3.json(embarked_url, function(error, response) {
+    if (error) return console.warn(error);
+    var data = [response];
+    console.log(response)
+    var layout = { margin: { t: 30, b:50 },
+                   title: "Number of New User by Ports",
+                   xaxis: { title: "User Embarked from the Ports "},
+                   yaxis: { title: "Number of New User"}            
+    }
+    Plotly.plot("bar5", data, layout)
+})
