@@ -124,7 +124,30 @@ def send():
 
         newUser[3] = 0
         newUser[4] = 0
-        newUser[5] = userTicket
+        # newUser[5] = userTicket
+
+        if userPclass.lower() == "50":
+            newUser[5] = 50
+        elif userPclass.lower() == "100":
+            newUser[5] = 100
+        elif userPclass.lower() == "150":
+            newUser[5] = 150
+        elif userPclass.lower() == "200":
+            newUser[5] = 200
+        elif userPclass.lower() == "250":
+            newUser[5] = 250
+        elif userPclass.lower() == "300":
+            newUser[5] = 300
+        elif userPclass.lower() == "350":
+            newUser[5] = 350
+        elif userPclass.lower() == "400":
+            newUser[5] = 400
+        elif userPclass.lower() == "450":
+            newUser[5] = 450
+        elif userPclass.lower() == "500":
+            newUser[5] = 500
+
+
         
         
         if userEmbarked.lower() == "c":
