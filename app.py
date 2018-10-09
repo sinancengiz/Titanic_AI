@@ -116,7 +116,7 @@ def send():
         newUser[3] = 0
         newUser[4] = 0
         
-        # assign values to newUser[1] for Gender Input
+        # assign values to newUser[5] for Ticket Price Input
         if userTicket.lower() == "50":
             newUser[5] = 50
         elif userTicket.lower() == "100":
@@ -138,9 +138,7 @@ def send():
         elif userTicket.lower() == "500":
             newUser[5] = 500
 
-
-        
-        
+        # assign values to newUser[6] for Port Input       
         if userEmbarked.lower() == "c":
             newUser[6] = 0
         elif userEmbarked.lower() == "q":
@@ -148,22 +146,23 @@ def send():
         elif userEmbarked.lower() == "s":
             newUser[6] = 2
 
-
+        # transform user input and make prediction
         testUser = svc_scaler.transform([newUser])
         prediction = svc.predict(testUser)
 
+        # save data in user with prediction values
         user = User(name=userName, pclass=newUser[0], sex=newUser[1],
                     age=userAge, sibsp = 0, parch = 0, fare = newUser[5],
                     embarked = newUser[6], survived=int(prediction[0])
                    )
-
+        # add and commit the user 
         db.session.add(user)
         db.session.commit()
-
+        # querry the result values
         results = db.session.query(User.name, User.pclass, User.sex, 
                                    User.age,  User.sibsp,  User.parch, 
                                    User.fare, User.embarked, User.survived).all()
-
+        # assign the querry result in to varialbles
         name = [result[0] for result in results]
         pclass = [result[1] for result in results]
         sex = [int(result[2]) for result in results]
@@ -174,7 +173,7 @@ def send():
         embarked = [result[7] for result in results]
         survived = [int(result[8]) for result in results]
 
-
+        # create plot trace
         plot_trace = {
             "name": name,
             "Pclass": pclass,
@@ -191,7 +190,7 @@ def send():
 
     return render_template("form.html")
 
-
+# return predicted survaval outcome 
 @app.route("/result")
 def result():
 
@@ -226,10 +225,10 @@ def result():
     else:
         return render_template('result.html', prediction = "Die", percentage = percentage, result_list = newUser )
 
+# return jasonified embarked port data 
 @app.route("/embarked")
 def embarked():
-    
-    #Same query method as used in the /plot route
+
     results = db.session.query(User.embarked,User.survived).all()
     embarkedlist = [result[0] for result in results]
     survivedlist = [result[1] for result in results]
@@ -250,10 +249,10 @@ def embarked():
     }
     return jsonify(embarked_trace)
 
+# return jasonified gender data 
 @app.route("/gender")
 def gender():
-    
-    #Same query method as used in the /plot route
+
     results = db.session.query(User.sex, User.survived).all()
     sexlist = [result[0] for result in results]
     survivedlist = [result[1] for result in results]
@@ -274,10 +273,10 @@ def gender():
     }
     return jsonify(sex_trace)
 
+# return jasonified passenger gender data 
 @app.route("/pasgender")
 def pasgender():
-    
-    #Same query method as used in the /plot route
+
     results = db.session.query(Passenger.Sex, Passenger.Survived).all()
     sexlist = [result[0] for result in results]
     survivedlist = [result[1] for result in results]
@@ -298,11 +297,10 @@ def pasgender():
     }
     return jsonify(sex_trace)
 
-
+# return jasonified passenger class data 
 @app.route("/pasclass")
 def pasclass():
     
-    #Same query method as used in the /plot route
     results = db.session.query(Passenger.Pclass, Passenger.Survived).all()
     sexlist = [result[0] for result in results]
     survivedlist = [result[1] for result in results]
