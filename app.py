@@ -89,62 +89,53 @@ def index():
 def send():
     newUser = [0,0,0,0,0,0,0] 
     if request.method == "POST":
-               
+        # get input from the form       
         userName = request.form["userName"]
         userPclass = request.form["userPclass"]
         userEmbarked = request.form["userEmbarked"]
         userAge = request.form["userAge"]
         userTicket= request.form["userTicket"]
-        # userGender= request.form["userGender"]
         userDropDownGender= request.form["userDropDownGender"]
 
-        print(userDropDownGender)
-
-        # newUser[0] = userPclass
-
+        # assign values to newUser[0] for Passenger Class Input
         if userPclass.lower() == "f":
             newUser[0] = 0
         elif userPclass.lower() == "s":
             newUser[0] = 1
         elif userPclass.lower() == "t":
             newUser[0] = 2
-
-        # if userGender.lower() == "male":
-        #     newUser[1] = 0
-        # else:
-        #     newUser[1] = 1
-
+        # assign values to newUser[1] for Gender Input
         if userDropDownGender == "gender1":
             newUser[1] = 0
         else:
             newUser[1] = 1
 
-
+        # assign values to newUser[2] for Age Input
         newUser[2] = int(userAge)
-
+        #default values for newUse[3] and [4]
         newUser[3] = 0
         newUser[4] = 0
-        # newUser[5] = userTicket
-
-        if userPclass.lower() == "50":
+        
+        # assign values to newUser[1] for Gender Input
+        if userTicket.lower() == "50":
             newUser[5] = 50
-        elif userPclass.lower() == "100":
+        elif userTicket.lower() == "100":
             newUser[5] = 100
-        elif userPclass.lower() == "150":
+        elif userTicket.lower() == "150":
             newUser[5] = 150
-        elif userPclass.lower() == "200":
+        elif userTicket.lower() == "200":
             newUser[5] = 200
-        elif userPclass.lower() == "250":
+        elif userTicket.lower() == "250":
             newUser[5] = 250
-        elif userPclass.lower() == "300":
+        elif userTicket.lower() == "300":
             newUser[5] = 300
-        elif userPclass.lower() == "350":
+        elif userTicket.lower() == "350":
             newUser[5] = 350
-        elif userPclass.lower() == "400":
+        elif userTicket.lower() == "400":
             newUser[5] = 400
-        elif userPclass.lower() == "450":
+        elif userTicket.lower() == "450":
             newUser[5] = 450
-        elif userPclass.lower() == "500":
+        elif userTicket.lower() == "500":
             newUser[5] = 500
 
 
